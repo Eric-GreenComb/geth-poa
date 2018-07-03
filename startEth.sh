@@ -9,14 +9,15 @@
 # 本目录只是init后的产物
 # geth --datadir node0 init greencomb.json
 
-set -e
-set -u
+# set -e
+# set -u
 
 # 启动挖矿节点，默认启用POA(clique)共识算法
 # coinbase账号默认有3780万个Ether
 geth  \
     --datadir ./node0\
     --ws\
+    --wsport 8580\
     --rpc\
     --rpcapi "eth,net,web3,admin,personal,txpool,miner,clique"\
     --rpccorsdomain "*"\
@@ -28,8 +29,8 @@ geth  \
     --password ./password.txt\
     --nodiscover\
     --maxpeers '50'\
-    --networkid 12759\
-    &
+    --networkid 12759
+    # &
 
 # 再次进入console调试
 # geth attach ipc:\./node0/geth.ipc

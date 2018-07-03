@@ -10,7 +10,7 @@ eth.accounts
 
 - 创建用户：
 
-personal.newAccount("111111")
+personal.newAccount("a11111")
 
 其中参数为此账户的密码。也可以先创建账户，然后输入密码：
 

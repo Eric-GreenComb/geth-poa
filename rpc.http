@@ -1,3 +1,4 @@
+
 ###web3_clientVersion
 POST http://127.0.0.1:8540
 Content-Type: application/json
@@ -64,7 +65,7 @@ Content-Type: application/json
     "id":67
 }
 
-###eth_syncing  error
+###eth_syncing  
 POST http://127.0.0.1:8540
 Content-Type: application/json
 
@@ -148,7 +149,7 @@ Content-Type: application/json
 {
     "jsonrpc":"2.0",
     "method":"eth_getBalance",
-    "params":["0x571ac5c2fb70d8553b593b1efb4a2524e01bb3e6","latest"],
+    "params":["0x4b4c55B5402b831C29613c94cDcB67B1eF3B2D50","latest"],
     "id":67
 }
 
@@ -159,7 +160,7 @@ Content-Type: application/json
 {
     "jsonrpc":"2.0",
     "method":"eth_getStorageAt",
-    "params":["0xfBE97c0324C44824F1d1c26669Dc590162cB9f16", "0x0", "latest"],
+    "params":["0xcc0084fd6c095de69290655a1d45188c8348d1fc", "0x0", "latest"],
     "id":67
 }
 
@@ -181,7 +182,7 @@ Content-Type: application/json
 {
     "jsonrpc":"2.0",
     "method":"eth_getTransactionReceipt",
-    "params":["0x390292d49d576c810ac8e8a10aa38021d1b36c57342416099e4f500b10016740"],
+    "params":["0x254256d507b31c395257d67a8f353ff559baaa69d8dcd88da1358efb39c62fda"],
     "id":67
 }
 
@@ -225,7 +226,7 @@ Content-Type: application/json
 {
     "jsonrpc":"2.0",
     "method":"eth_sign",
-    "params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],
+    "params":["0x762009cd5dcabb5a125008d70f5efdbdff2aa782", "0xdeadbeaf"],
     "id":1
 }
 
@@ -255,9 +256,36 @@ Content-Type: application/json
     "jsonrpc":"2.0",
     "method":"eth_call",
     "params":[{
-        "to":"0xF1B5846669cD60E5CF766097bF052844727d0F29", 
-        "data":"0x70a0823100000000000000000000000000eaF5c65F32917c922364e4892b5EC5A35baa6E"}, 
+        "to":"0x22efc4515a218133b0a31fb6af07deddc7182923", 
+        "data":"0x70a08231000000000000000000000000762009cd5dcabb5a125008d70f5efdbdff2aa782"}, 
         "latest"
     ],
     "id":1
 }
+
+### eth_estimateGas 
+POST http://127.0.0.1:8540
+Content-Type: application/json
+
+{
+    "jsonrpc":"2.0",
+    "method":"eth_estimateGas",
+    "params":[{
+        "to":"0x22efc4515a218133b0a31fb6af07deddc7182923", 
+        "data":"0x70a08231000000000000000000000000762009cd5dcabb5a125008d70f5efdbdff2aa782"}, 
+        "latest"
+    ],
+    "id":1
+}
+
+### eth_getCompilers
+POST http://127.0.0.1:8540
+Content-Type: application/json
+
+{
+    "jsonrpc":"2.0",
+    "method":"eth_getCompilers",
+    "params":[],
+    "id":1
+}
+
