@@ -18,10 +18,12 @@ geth  \
     --datadir ./node0\
     --ws\
     --wsport 8580\
+    --wsorigins "*"\
     --rpc\
     --rpcapi "eth,net,web3,admin,personal,txpool,miner,clique"\
     --rpccorsdomain "*"\
     --rpcaddr 0.0.0.0\
+    --rpcvhosts "*"\
     --rpcport 8540\
     --mine\
     --etherbase 0x762009cd5dcabb5a125008d70f5efdbdff2aa782\
